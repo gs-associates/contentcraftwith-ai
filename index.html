@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContentCraft AI - AI-Powered Social Media Content Generator</title>
+    <meta name="description" content="Generate engaging social media content with AI. Create posts for Instagram, Twitter, LinkedIn, and TikTok in seconds.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo">🤖</span>
+                <span class="brand-name">ContentCraft AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#about">About</a>
+                <button class="btn-secondary" onclick="showLogin()">Sign In</button>
+                <button class="btn-primary" onclick="showSignup()">Start Free</button>
+            </div>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">AI-Powered Social Media Content That Drives Engagement</h1>
+                <p class="hero-subtitle">Create viral-worthy posts for Instagram, Twitter, LinkedIn, and TikTok in seconds. No writer's block, just results.</p>
+                
+                <div class="hero-cta">
+                    <div class="input-group">
+                        <input type="text" class="hero-input" placeholder="Enter your topic (e.g., 'Tips for remote work productivity')" id="heroInput">
+                        <button class="btn-primary" onclick="generateContent()">Generate Free</button>
+                    </div>
+                    <p class="cta-note">No credit card required • 5 free generations daily</p>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Posts Generated</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Happy Creators</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">User Rating</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="demo-card">
+                    <div class="demo-header">
+                        <div class="demo-platform">Instagram</div>
+                        <div class="demo-time">2 min ago</div>
+                    </div>
+                    <div class="demo-content">
+                        <div class="demo-text">💡 5 productivity tips that changed my remote work game:
+
+1. 🎯 Time-block your calendar
+2. 📱 Use the 2-minute rule
+3. 🔕 Turn off non-essential notifications
+4. 🏃 Take regular breaks
+5. 📝 Write a daily reset ritual
+
+What's your best productivity hack? 👇</div>
+                    <div class="demo-metrics">
+                        <span>❤️ 1,234 likes</span>
+                        <span>💬 89 comments</span>
+                        <span>🔄 45 shares</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to Create Viral Content</h2>
+                <p>Powerful AI tools designed for content creators, marketers, and businesses</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Platform-Specific Content</h3>
+                    <p>AI generates content optimized for each social media platform's unique format and audience expectations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Performance Analytics</h3>
+                    <p>Track engagement metrics and get insights on which content performs best for your audience.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏷️</div>
+                    <h3>Smart Hashtags</h3>
+                    <p>Automatically generate relevant hashtags that boost your content reach and discovery.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Content Calendar</h3>
+                    <p>Plan and schedule your posts across multiple platforms with our intuitive calendar interface.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Content Templates</h3>
+                    <p>Choose from dozens of proven content templates for different industries and goals.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Bulk Generation</h3>
+                    <p>Create multiple posts at once for your content campaigns and maintain consistency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your content creation needs</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">Free</div>
+                    <div class="plan-price">$0<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>✅ 5 AI generations daily</li>
+                        <li>✅ 3 social platforms</li>
+                        <li>✅ Basic templates</li>
+                        <li>✅ Community support</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="showSignup()">Start Free</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-name">Pro</div>
+                    <div class="plan-price">$19<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>✅ Unlimited AI generations</li>
+                        <li>✅ All social platforms</li>
+                        <li>✅ Advanced templates</li>
+                        <li>✅ Analytics dashboard</li>
+                        <li>✅ Priority support</li>
+                        <li>✅ Team collaboration</li>
+                    </ul>
+                    <button class="btn-primary" onclick="showSignup()">Start Free Trial</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="plan-name">Business</div>
+                    <div class="plan-price">$49<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>✅ Everything in Pro</li>
+                        <li>✅ White-label solution</li>
+                        <li>✅ API access</li>
+                        <li>✅ Custom integrations</li>
+                        <li>✅ Dedicated support</li>
+                        <li>✅ Advanced analytics</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="contactSales()">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>See ContentCraft AI in Action</h2>
+                <p>Watch how easy it is to create engaging social media content</p>
+            </div>
+            
+            <div class="demo-container">
+                <div class="demo-interface">
+                    <div class="demo-sidebar">
+                        <div class="platform-tabs">
+                            <button class="tab active" data-platform="instagram">📷 Instagram</button>
+                            <button class="tab" data-platform="twitter">🐦 Twitter</button>
+                            <button class="tab" data-platform="linkedin">💼 LinkedIn</button>
+                            <button class="tab" data-platform="tiktok">🎵 TikTok</button>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-main">
+                        <div class="generator-box">
+                            <textarea placeholder="Describe the post you want to create..." id="demoInput">Create a motivational Monday post about overcoming challenges</textarea>
+                            <div class="generator-controls">
+                                <div class="platform-selector">
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked> Instagram
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox"> Twitter
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox"> LinkedIn
+                                    </label>
+                                </div>
+                                <button class="btn-primary" onclick="demoGenerate()">Generate Content</button>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-result" id="demoResult">
+                            <div class="result-header">
+                                <span class="platform-badge">Instagram</span>
+                                <button class="copy-btn" onclick="copyContent()">📋 Copy</button>
+                            </div>
+                            <div class="result-content" id="resultContent">
+                                🌟 Monday Motivation: Every challenge is a chance to grow stronger! 💪
+
+Sometimes life throws curveballs that seem impossible to handle. But here's the truth - you've already overcome 100% of your bad days so far. 
+
+✨ Your past victories prove you're capable of handling whatever comes next.
+
+Today's challenge isn't here to break you - it's here to build you into someone even more resilient.
+
+What challenge are you turning into your superpower today? 
+
+#MondayMotivation #Growth #Resilience #Success #Mindset #Monday #Inspiration #Goals #Strength #Overcome
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">🤖</span>
+                    <span class="brand-name">ContentCraft AI</span>
+                    <p>AI-powered content creation for the modern creator.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#demo">Demo</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#careers">Careers</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="#help">Help Center</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#privacy">Privacy</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <a href="#twitter">Twitter</a>
+                        <a href="#linkedin">LinkedIn</a>
+                        <a href="#instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ContentCraft AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sign In to ContentCraft AI</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn-primary full-width">Sign In</button>
+                <p class="auth-note">Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Start Your Free Account</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create a password">
+                </div>
+                <button type="submit" class="btn-primary full-width">Create Account</button>
+                <p class="auth-note">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
